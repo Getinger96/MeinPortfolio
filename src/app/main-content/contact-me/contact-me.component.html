@@ -1,0 +1,179 @@
+<div id="contact" class="contact-Me-Container">
+  <div data-aos="fade-up" data-aos-duration="2500" class="contact-Me-Content">
+    <div class="contact-me-Top">
+      <div class="container-Title">
+        @if (this.potfolio.languageGerman) {
+        <span>Kontaktiere mich</span>
+        }@else {
+        <span>Contact me</span>
+        }
+
+        <img src="../../assets/img/contact-Me-img/arrow-contact.png" alt="">
+      </div>
+      <div class="container-Content">
+        <div class="content">
+          @if (this.potfolio.languageGerman) {
+          <span>Noch nicht sicher ob ich die richtige Person für Ihr Projekt bin? Kontaktieren sie mich
+            damit ich
+            Ihre meinung änderen kann. Lassen sie uns zusammenarbeiten.</span>
+          }@else {
+          <span>Not sure if I'm the right person for your project? Contact me
+            so that I
+            Your mind may change. Let's work together.</span>
+          }
+
+        </div>
+        <div class="contact-possibility-Container">
+          <div>
+            <a href="mailto:erich.getinger@outlook.de"><img
+                onmouseover="this.src='../../assets/img/contact-Me-img/email_ hover.png'"
+                onmouseout="this.src='../../assets/img/contact-Me-img/icon _email_.png'"
+                src="../../assets/img/contact-Me-img/icon _email_.png" alt=""></a>
+            <span>E-mail <a href="mailto:erich.getinger@outlook.de">Erich.getinger&#64;outlook.de</a></span>
+          </div>
+          <div>
+            <a href="tel:1771480425"><img
+                onmouseover="this.src='../../assets/img/contact-Me-img/icon _phone_ hover.png'"
+                onmouseout="this.src='../../assets/img/contact-Me-img/1 icon _phone_.png'"
+                src="../../assets/img/contact-Me-img/1 icon _phone_.png" alt=""></a>
+
+            <span> Tel : <a href="tel:1771480425">01771480425</a></span>
+          </div>
+        </div>
+        <div class="img_div">
+          <a href="#start"><img onmouseover="this.src='../../assets/img/contact-Me-img/arrow-hover-up.png'"
+              onmouseout="this.src='../../assets/img/contact-Me-img/Arrow Up.png'"
+              src="../../assets/img/contact-Me-img/Arrow Up.png" alt=""></a>
+
+        </div>
+
+
+
+      </div>
+
+    </div>
+    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+      <div class="contactme-Form_top">
+        <div>
+          @if (this.potfolio.languageGerman) {
+          <input
+            [ngClass]="{'empty-input-Name':!contactData.name && name.touched, 'invalid-placeholder':!contactData.name && name.touched}"
+            #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name" required>
+          <div class="validation-container">
+            <div *ngIf="name.touched && !contactData.name" class="validation-text">Bitte gib deinen Namen ein.</div>
+          </div>
+
+          }@else {
+          <input
+            [ngClass]="{'empty-input-Name':!contactData.name && name.touched, 'invalid-placeholder':!contactData.name && name.touched}"
+            #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name" required>
+          <div class="validation-container">
+            <div *ngIf="name.touched && !contactData.name" class="validation-text">Please enter your name.</div>
+          </div>
+
+          }
+
+          @if (this.potfolio.languageGerman) {
+          <input
+            [ngClass]="{'empty-input-Name': !contactData.email && email.touched, 'invalid-placeholder': !contactData.email && email.touched}"
+            #email="ngModel" [(ngModel)]="contactData.email" type="text" id="email" name="email" required
+            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+          <div class="validation-container">
+            <div *ngIf="email.touched && !contactData.email" class="validation-text">
+              Bitte gib deine E-Mail ein (z. B. max&#64;mustermann.de).
+            </div>
+            <div *ngIf="email.touched && email.errors?.['pattern']" class="validation-text">
+              Bitte gib eine gültige E-Mail-Adresse ein (z. B. max&#64;mustermann.de).
+            </div>
+          </div>
+
+          }@else {
+          <input
+            [ngClass]="{'empty-input-Name': !contactData.email && email.touched, 'invalid-placeholder': !contactData.email && email.touched}"
+            #email="ngModel" [(ngModel)]="contactData.email" type="text" id="email" name="email" required
+            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+          <div class="validation-container">
+            <div *ngIf="email.touched && !contactData.email" class="validation-text">
+              Please enter your email (e.g., max&#64;mustermann.com).
+            </div>
+            <div *ngIf="email.touched && email.errors?.['pattern']" class="validation-text">
+              Please enter a valid email address (e.g., max&#64;mustermann.com).
+            </div>
+          </div>
+
+          }
+
+        </div>
+        <div>
+          @if (this.potfolio.languageGerman) {
+
+          <textarea
+            [ngClass]="{'empty-input-Name':!contactData.message && message.touched, 'invalid-placeholder':!contactData.message && message.touched}"
+            #message="ngModel" minlength="4" [(ngModel)]="contactData.message" name="message" id="message"
+            required></textarea>
+          <div class="validation-container">
+            <div *ngIf="message.touched && !contactData.message" class="validation-text">Bitte gib deine Nachricht ein
+              (mindestens 4 Zeichen).</div>
+            <div *ngIf="message.touched && message.errors?.['minlength']" class="validation-text">Die Nachricht muss
+              mindestens 4 Zeichen enthalten.</div>
+          </div>
+
+
+
+          }@else {
+          <textarea
+            [ngClass]="{'empty-input-Name':!contactData.message && message.touched, 'invalid-placeholder':!contactData.message && message.touched}"
+            #message="ngModel" minlength="4" [(ngModel)]="contactData.message" name="message" id="message"
+            required></textarea>
+          <div class="validation-container">
+            <div *ngIf="message.touched && !contactData.message" class="validation-text">Please enter your message
+              (minimum 4 characters).</div>
+            <div *ngIf="message.touched && message.errors?.['minlength']" class="validation-text">The message must be at
+              least 4 characters long.</div>
+          </div>
+
+          }
+        </div>
+      </div>
+
+      <div class="checkbox-container">
+        <input type="checkbox" [(ngModel)]="isChecked" name="terms" class="custom-checkbox">
+        @if (this.potfolio.languageGerman) {
+        <span>Ich habe die <a routerLink="privacypolicy">Datenschutzerklärung</a> gelesen und bin mit der vereinbarten
+          Verarbeitung meiner
+          Daten einverstanden.</span>
+        }@else {
+        <span>I have read the <a routerLink="privacypolicy">privacy policy</a> and agree to the agreed processing of my data.</span>
+        }
+      </div>
+
+      <div class="submit-section">
+        <input class="submit-input" [disabled]="!isChecked || !contactForm.valid" type="submit" value="Send">
+      </div>
+    </form>
+
+
+    <div class="contact-me-arrow-responsive">
+      <div> <a href=""><img onmouseover="this.src='../../assets/img/contact-Me-img/arrow-hover-up.png'"
+            onmouseout="this.src='../../assets/img/contact-Me-img/Arrow Up.png'"
+            src="../../assets/img/contact-Me-img/Arrow Up.png" alt=""></a>
+      </div>
+    </div>
+
+    <div class="contact-me-posibility-responsive">
+      <a href="mailto:erich.getinger@outlook.de"><img
+          onmouseover="this.src='../../assets/img/contact-Me-img/email_ hover.png'"
+          onmouseout="this.src='../../assets/img/contact-Me-img/icon _email_.png'"
+          src="../../assets/img/contact-Me-img/icon _email_.png" alt=""></a>
+      <a href="mailto:erich.getinger@outlook.de">Erich.getinger&#64;outlook.de</a>
+
+
+      <a href="tel:1771480425"><img onmouseover="this.src='../../assets/img/contact-Me-img/icon _phone_ hover.png'"
+          onmouseout="this.src='../../assets/img/contact-Me-img/1 icon _phone_.png'"
+          src="../../assets/img/contact-Me-img/1 icon _phone_.png" alt=""></a>
+      <a href="tel:1771480425">0177 148 042 5</a>
+    </div>
+
+
+  </div>
+</div>

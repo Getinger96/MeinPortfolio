@@ -1,0 +1,46 @@
+<div class="nav-Bar_Container">
+  <div class="nav-Bar_Content">
+
+    <div class="intials-container">
+      <a routerLink="/"> <span class="initials-burger">
+          < EG >
+        </span></a>
+
+    </div>
+
+    <div class="nav-bar-burger">
+      <img class="burger-menu" (click)="openMenu()" src="../../assets/img/burger menu.png" alt="">
+    </div>
+
+    <div class="a-Links-Container">
+      <a class="initials" href="#start">
+        < EG >
+      </a>
+@if (this.portfolio.languageGerman) {
+  <a href="#whyme">Warum ich</a>
+  <a href="#skills">Fähigkeiten</a>
+  <a href="#projects">Projekte</a>
+  <a href="#contact">Kontakt</a>
+}@else {
+  <a href="#whyme">Why me</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+}
+    
+    </div>
+
+    <div class="language-container">
+
+      <span [ngClass]="{'active': this.portfolio.languageGerman}" (click)="chooseGerman()" class="language">DE</span>
+      <span class="stick">|</span>
+      <span [ngClass]="{'active': this.portfolio.languageEnglisch}" (click)="chooseEnglisch()" class="language">EN</span>
+
+    </div>
+
+
+
+  </div>
+
+
+</div>

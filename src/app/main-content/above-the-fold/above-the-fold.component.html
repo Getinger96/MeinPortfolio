@@ -1,0 +1,70 @@
+<div class="menu" [ngClass]="{'d_none':potfolio.overlayVisible==false,'d_flex':potfolio.overlayVisible==true}">
+    <div class="x-button"><img (click)="closeMenu()" src="../../assets/img/x_button.png" alt=""></div>
+    <div class="a-container" >
+        <div class="">
+
+            <a (click)="closeMenu()" href="#whyme">Why me</a>
+            <a (click)="closeMenu()" href="#skills">Skills</a>
+            <a (click)="closeMenu()" href="#projects">Projects</a>
+            <a (click)="closeMenu()" href="#contact">Contact</a>
+    
+    
+        </div>
+    
+    </div>
+   
+</div>
+
+
+
+
+
+
+<div id="start" class="aboveTheFold_Container">
+    <div>
+        <div class="me-Container">
+
+            <img src="./../../assets/img/Above-img/Dunkel_Ohne Hintergrund.png" alt="">
+
+            <div data-aos="fade-up">
+                <div class="vector-container">
+                    <div>
+                        <a href="#whyme"><img onmouseover="this.src='./../assets/img/Above-img/arrow-hover-down.png'"
+                                class="vector" onmouseout="this.src='./../assets/img/Above-img/Vector.png'"
+                                src="../../assets/img/Above-img/Vector.png" alt=""></a>
+                    </div>
+                </div>
+
+
+                <div class="contact-button-container">
+                    @if (this.potfolio.languageGerman) {
+                    <a href="#contact"><button>Kontaktier mich</button></a>
+                    }@else {
+                    <a href="#contact"><button>CONTACT ME</button></a>
+                    }
+
+                </div>
+
+                @if (this.potfolio.languageGerman) {
+                <span class="typing">FRONTEND ENTWICKLER</span>
+                <span class="bigName typing">Erich Getinger</span>
+                }@else {
+                <span class="typing">FRONTEND DEVELOPER</span>
+                <span class="bigName typing">Erich Getinger</span>
+                }
+
+
+
+
+
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+</div>

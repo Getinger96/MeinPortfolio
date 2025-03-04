@@ -1,0 +1,196 @@
+.content-impressum {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 24px;
+    color: aqua;
+    width: 100%;
+    
+   
+
+>div{
+ display: flex;  
+ flex-direction: column; 
+ align-items: center;
+ padding: 16px;
+ width: 1440px;
+}
+}
+
+a {
+    text-decoration: none;
+    color: rgba(225, 85, 68, 1);
+}
+
+.menu {
+    height:100%;
+    background: linear-gradient(rgba(19, 7, 78, 1), rgba(29, 10, 121, 0.95));
+    z-index: 1;
+    display: flex;
+    width: 480px;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+
+
+}
+
+
+.x-button {
+    display: flex;
+    justify-content: end;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.a-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 230px;
+    margin-top: 68px;
+
+
+    >a {
+        text-decoration: none;
+        color: rgba(225, 85, 68, 1);
+        font-family: 'Roboto Mono';
+        font-size: 18px;
+
+        &:hover {
+            color: rgba(2, 244, 191, 1);
+        }
+    }
+}
+
+.d_none {
+    display: none;
+}
+
+.d_flex {
+    display: flex;
+}
+h1{
+    margin-top: 50px;
+}
+
+
+@media(max-width:1490px){
+    .content-impressum {
+        
+       
+    
+    >div{
+    
+     width: 1220px;
+    }
+    }
+
+}
+@media(max-width:1270px){
+    .content-impressum {
+        
+       
+    
+    >div{
+    
+     width: 900px;
+    }
+    }
+
+}
+
+@media(max-width:950px){
+    .content-impressum {
+        
+        font-size: 18px;
+    
+    >div{
+    
+     width: 720px;
+    }
+    }
+
+}
+
+@media(max-width:770px){
+    .content-impressum {
+        
+       
+    
+    >div{
+    
+     width: 500px;
+    }
+    }
+
+}
+
+
+@media(max-width:550px){
+    .content-impressum {
+        
+       
+    
+    >div{
+    
+     width: 420px;
+    }
+    }
+
+}
+
+
+
+@media(max-width:480px){
+    .content-impressum {
+        
+        color: aqua;
+        font-size: 16px;
+        word-break: break-word;
+
+        >div{
+    
+            width: 270px;
+            padding: 8px;
+           }
+    }
+}
+
+@media(max-height:900px) {
+
+   
+
+   
+    .a-container{
+        gap: 200px;
+    }
+
+
+}
+
+
+@media(max-height:740px) {
+
+   
+
+   
+    .a-container{
+        gap: 150px;
+    }
+
+
+}
+
+
+@media(max-height:653px) {
+
+   
+
+   
+    .a-container{
+        gap: 140px;
+    }
+
+
+}

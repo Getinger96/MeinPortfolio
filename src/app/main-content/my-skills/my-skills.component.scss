@@ -1,0 +1,251 @@
+.my-Skills-Container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding-top: 60px;
+
+}
+
+.button {
+    width: 170px;
+    height: 52px;
+    background-color: rgba(2, 244, 191, 1);
+    font-family: 'Roboto Mono';
+    font-weight: 500;
+    font-size: 18px;
+    color: rgba(11, 4, 45, 1);
+    border: 1px solid rgba(2, 244, 191, 1);
+    cursor: pointer;
+
+    &:hover {
+        color: rgba(225, 85, 68, 1);
+
+    }
+
+}
+
+.my-Skills-Contents{
+width: 1440px;
+}
+
+.content-Title {
+    margin-bottom: 28px;
+    
+
+    >span {
+        font-family: 'Roboto Mono';
+        font-weight: 500;
+        font-size: 54px;
+        color: rgba(225, 85, 68, 1);
+    }
+}
+
+.icon-Container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 150px;
+    margin-bottom: 50px;
+    
+  
+    
+    >div {
+
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+
+        >img{
+            transition: transform 0.3s ease-in-out;
+        }
+       
+        &:hover >img{
+            transform: scale(1.1);
+        }
+      
+
+       
+    }
+}
+
+.challenge-me-container{
+    
+    width: 300px !important;
+    display: flex;
+    gap: 50px;
+    cursor: pointer;
+    >span{
+       
+        color: rgba(2, 244, 191, 1);
+        font-family: 'Roboto Mono';
+        font-weight: 300;
+        font-size: 18px;
+        text-align: center;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.5s linear;
+
+        
+    }
+
+    &:hover {
+        >span{
+            opacity: 1;
+           
+            visibility: visible;
+        }
+    }
+}
+
+
+.arrow-Responsive {
+    display: none;
+}
+
+@keyframes moveCircle {
+    0% {
+        transform: translate(-50%, -50%) translateX(0) translateY(0);
+    }
+    50% {
+        transform: translate(-50%, -50%) translateX(50px) translateY(-50px); /* Verschiebung des Kreises */
+    }
+    100% {
+        transform: translate(-50%, -50%) translateX(0) translateY(0); /* Zurück zum Ursprung */
+    }
+}
+
+@keyframes rotateCircle {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg); /* Anfangsrotation */
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg); /* Volle Drehung */
+    }
+}
+
+
+@media(max-width:1490px){
+.my-Skills-Contents{
+    width: 1200px;
+}
+}
+
+
+@media(max-width:1270px) {
+    .my-Skills-Contents{
+        width: 1080px;
+    }
+
+    .icon-Container {
+        gap: 90px;
+        justify-content: center;
+
+        >div {
+            width: 80px;
+        }
+    }
+}
+
+@media(max-width:1100px){
+    .my-Skills-Contents{
+        width: 860px;
+    }
+}
+
+
+@media(max-width:1125px) {
+
+
+    .icon-Container {
+        
+        gap: 80px;
+
+        >div {
+            width: 110px;
+        }
+    }
+}
+
+
+@media(max-width:950px) {
+    .my-Skills-Contents{
+        width: 740px;
+    }
+}
+
+
+@media(max-width:770px) {
+    .my-Skills-Contents{
+        width: 480px;
+    }
+
+    .content-Title {
+        display: flex;
+        justify-content: center;
+
+        >span{
+            font-size: 45px;
+        }
+    }
+
+    .icon-Container {
+        justify-content: center;
+        gap: 206px;
+    }
+
+    .arrow-Responsive {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 24px;
+
+
+        >span {
+            color: rgba(2, 244, 191, 1);
+            font-family: 'Roboto Mono';
+            font-weight: 400;
+            font-size: 16px;
+        }
+
+    }
+
+    .challenge-me-container{
+    
+        >span{
+           
+         display: none;
+    
+            
+        }
+    
+       
+    }
+    
+
+}
+
+
+@media(max-width:500px) {
+
+    .content-Title {
+        display: flex;
+        justify-content: center;
+
+        >span{
+            font-size: 40px;
+            text-align: center;
+        }
+    }
+
+    .my-Skills-Contents{
+        width: 300px;
+    }
+
+
+        .icon-Container {
+            gap: 80px;
+        }
+    
+}

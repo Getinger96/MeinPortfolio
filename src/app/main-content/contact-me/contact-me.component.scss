@@ -1,0 +1,515 @@
+.contact-Me-Container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+
+    padding-top: 70px;
+
+
+
+}
+
+.validation-container {
+    min-height: 20px;  /* Stelle sicher, dass immer ein wenig Platz reserviert wird, auch wenn keine Nachricht da ist */
+    visibility: hidden; /* Nachricht bleibt unsichtbar, aber der Raum wird weiterhin reserviert */
+  }
+  
+  .validation-text {
+    visibility: visible;  /* Wenn die Nachricht angezeigt wird, bleibt sie sichtbar */
+    color: red;
+    font-size: 16px;
+  }
+  
+  input:invalid {
+    border-color: red; /* Optional: rote Umrandung, wenn die Eingabe ungültig ist */
+  }
+  
+ 
+.contact-Me-Content {
+    width: 1440px;
+}
+
+.container-Title {
+    color: rgba(225, 85, 68, 1);
+    font-family: 'Roboto Mono';
+    font-size: 54px;
+    font-weight: 500;
+
+}
+
+
+.container-Content {
+    display: flex;
+    gap: 200px;
+    margin-bottom: 50px;
+
+    >.img_div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70px;
+        height: 100px;
+
+        >img {
+
+            cursor: pointer;
+        }
+
+    }
+
+
+
+
+    .content {
+        display: flex;
+        flex: 1;
+    }
+
+    >div {
+
+
+        >span {
+            color: rgba(2, 244, 191, 1);
+            font-family: 'Roboto Mono';
+            font-weight: 400;
+            font-size: 18px;
+        }
+
+        >div {
+            display: flex;
+            align-items: center;
+
+
+            >span {
+                color: rgba(2, 244, 191, 1);
+                font-family: 'Roboto Mono';
+                font-weight: 500;
+                font-size: 20px;
+
+                >a {
+                    text-decoration: none;
+                    color: rgba(2, 244, 191, 1);
+                }
+            }
+
+            ;
+        }
+    }
+}
+
+::placeholder {
+    color: rgba(2, 244, 191, 1);
+    font-family: 'Roboto Mono';
+    font-weight: 300;
+    font-size: 18px;
+}
+
+
+
+form {
+
+
+    .contactme-Form_top {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 24px;
+
+        >div {
+            width: 650px;
+            display: flex;
+            flex-direction: column;
+            
+
+
+            >input {
+                background: transparent;
+                color: rgba(2, 244, 191, 1);
+                font-family: 'Roboto Mono';
+                font-weight: 300;
+                font-size: 18px;
+                border: 1px solid rgba(2, 244, 191, 1);
+                padding: 8px;
+
+                
+
+
+
+
+            }
+
+            >textarea {
+                background: transparent;
+                color: rgba(2, 244, 191, 1);
+                font-family: 'Roboto Mono';
+                font-weight: 300;
+                font-size: 18px;
+                border: 1px solid rgba(2, 244, 191, 1);
+                flex-grow: 1
+            }
+        }
+    }
+
+    ;
+}
+
+.submit-section {
+    display: flex;
+    justify-content: flex-end;
+
+
+
+
+}
+
+
+
+.submit-input {
+    font-size: 18px;
+    background: transparent;
+    border: 1px solid rgba(2, 244, 191, 1);
+    ;
+    color: rgba(225, 85, 68, 1);
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 24px;
+    padding-right: 24px;
+    justify-content: end;
+    cursor: pointer;
+
+    &:hover{
+        background-color:  rgba(2, 244, 191, 1);;
+    }
+}
+
+.submit-input:disabled {
+    border: 1px solid grey;
+    /* Graue Border */
+    color: grey;
+    /* Graue Schrift */
+    background-color: transparent;
+    /* Transparenter Hintergrund */
+    cursor: not-allowed;
+    /* Mauszeiger in den "nicht erlaubt"-Stil ändern */
+}
+
+.empty-input-Name {
+    border: 2px solid red !important;
+    color: red !important;
+}
+
+.invalid-placeholder::placeholder {
+    color: red !important;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+
+    >span {
+        color: rgba(2, 244, 191, 1);
+        font-family: 'Roboto Mono';
+        font-weight: 300;
+        font-size: 14px;
+
+        >a {
+            color: rgba(225, 85, 68, 1);
+            font-family: 'Roboto Mono';
+            font-size: 14px;
+            font-weight: 300;
+            text-decoration: none;
+        }
+    }
+}
+
+.custom-checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgba(225, 85, 68, 1);
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.custom-checkbox::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    border: 1px solid rgba(225, 85, 68, 1);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+
+
+.custom-checkbox:checked::before {
+    background: transparent;
+    border-color: rgba(225, 85, 68, 1);
+}
+
+.custom-checkbox:checked::after {
+    content: '✔';
+    /* Häkchen als Text */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    color: rgba(225, 85, 68, 1);
+}
+
+.custom-checkbox:hover {
+    background-color: rgba(2, 244, 191, 1);
+}
+
+.contact-me-arrow-responsive {
+    display: none;
+}
+
+.contact-me-posibility-responsive {
+    display: none;
+}
+
+
+
+@media(max-width:1490px) {
+    .contact-Me-Content {
+        width: 1200px;
+    }
+
+    form {
+        .contactme-Form_top {
+            >div {
+                width: 500px
+            }
+        }
+
+        ;
+    }
+}
+
+
+@media(max-width:1270px) {
+    .contact-Me-Content {
+        width: 1080px;
+    }
+
+}
+
+
+@media(max-width:1100px) {
+    .contact-Me-Content {
+        width: 900px;
+    }
+
+    .container-Content {
+        gap: 80px;
+
+        >div {
+            >span {
+                font-size: 16px;
+            }
+
+            >div {
+                >span {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+
+    form {
+        .contactme-Form_top {
+            >div {
+                width: 400px
+            }
+        }
+
+        ;
+    }
+}
+
+
+@media(max-width:950px) {
+
+    .contact-Me-Content {
+        width: 720px;
+    }
+
+    form {
+        .contactme-Form_top {
+            >div {
+                width: 300px
+            }
+        }
+
+        ;
+    }
+}
+
+@media(max-width:770px) {
+    .contact-Me-Content {
+        width: 480px;
+        margin-bottom: 50px;
+    }
+
+    .container-Title {
+        display: flex;
+        justify-content: center;
+
+        >img {
+            display: none;
+        }
+    }
+
+    .contact-possibility-Container {
+        display: none;
+    }
+
+    .container-Content {
+        >.img_div{
+            display: none;
+        }
+
+       
+       
+    }
+
+    form {
+        .contactme-Form_top {
+            flex-direction: column;
+            gap: 40px;
+
+            >div {
+                width: 480px;
+
+                >textarea {
+                    height: 144px
+                }
+            }
+        }
+
+        ;
+    }
+
+    .submit-section {
+        justify-content: center;
+        margin-bottom: 24px;
+    }
+
+
+    .checkbox-container {
+        margin-bottom: 20px;
+    }
+
+    .custom-checkbox {
+        width: 40px;
+    }
+
+    .contact-me-posibility-responsive {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+
+        >span {
+            color: rgba(2, 244, 191, 1);
+            font-family: 'Roboto Mono';
+            font-weight: 700;
+            font-size: 18px;
+
+        }
+
+        >a {
+            text-decoration: none;
+            color: rgba(2, 244, 191, 1);
+            font-family: 'Roboto Mono';
+            font-weight: 700;
+            font-size: 18px;
+            >img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+       
+    }
+
+    .contact-me-arrow-responsive {
+        display: flex;
+        justify-content: flex-end;
+        >div{
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+
+}
+
+
+@media(max-width:500px) {
+    .contact-Me-Content {
+        width: 320px;
+
+    }
+
+    .container-Title {
+        font-size: 45px;
+        text-align: center;
+    }
+
+    form {
+        .contactme-Form_top {
+            >div {
+                width: 320px
+            }
+        }
+
+        ;
+    }
+
+
+}
+
+@media(max-width:340px) {
+    .container-Title {
+        font-size: 40px;
+    }
+
+    .contact-Me-Content {
+        width: 300px;
+        padding-left: 16px;
+
+    }
+
+    .contact-Me-Content {
+        >div {
+            >span {
+                text-align: center;
+            }
+        }
+    }
+
+    form {
+        .contactme-Form_top {
+            >div {
+                width: 270px
+            }
+        }
+
+        ;
+    }
+}

@@ -1,0 +1,107 @@
+<div id="whyme" class="why-Me-Container">
+
+    <div data-aos="fade-down" data-aos-duration="1000" class="why-Me-Content">
+        <img class="why-me-Img" src="../../assets/img/Above-img/Bild_Ohne_Brille.jpg">
+        <div>
+            <div class="why-me-text">
+                @if (this.portfolio.languageGerman) {
+                <span class="why-me-title">Warum ich</span>
+                }@else {
+                <span class="why-me-title">Why me</span>
+                }
+
+                @if(this.portfolio.languageGerman){ <span class="why-me-note">Ich bin sehr daran interssiert neue
+                    Technologien zu lernen und zu nutzen um
+                    mich selbst auch weiterzuentwickeln. Die herausforderung Probleme zu erkennen und zu lösen reizt
+                    mich am Programieren sehr was mich zu einem Wertvollem Mitglied ihres Teams machen wird
+                </span>}@else { <span class="why-me-note">I am very interested in learning and using new technologies
+                    to develop myself further. The challenge of identifying and solving problems is exciting
+                    I love programming which will make me a valuable member of your team
+                </span>
+                }
+
+
+            </div>
+            <div class="arrow-Container-Responsive">
+                <img src="../../assets/img/Whyme-img/Arrow 5.png" alt="">
+            </div>
+            <div class="iam-Container">
+
+                <div class="i-Live">
+                    <span class="iam-Title">Ich</span>
+                    <div>
+                        <div (mouseover)="showEllipse=true" (mouseout)="showEllipse=false">
+                            <img src="../../assets/img/Whyme-img/standort-img.png" alt="">
+                            <img class="ellipse-img" src="../../assets/img/Whyme-img/Ellipse 20.png" alt="">
+
+                        </div>
+
+
+                        @if(this.portfolio.languageGerman){
+
+                        <span>wohne in Mönchengladbach</span>
+                        }@else {
+                        <span>live in Mönchengladbach</span>
+                        }
+                    </div>
+
+                </div>
+                <div class="i-open">
+                    <img src="../../assets/img/Whyme-img/Arrow 5.png" alt="">
+                    <div>
+                        <div>
+                            <img src="../../assets/img/Whyme-img/koffer-img.png" alt="">
+                            <img class="hover-img" src="../../assets/img/Whyme-img/koffer_hover.png">
+                        </div>
+
+
+
+                        @if (this.portfolio.languageGerman) {
+                        <span>bin offen Außerorts zu arbeiten</span>
+                        }@else {
+                        <span>I'm open to working outside of town</span>
+                        }
+
+                    </div>
+
+                </div>
+                <div class="i-Work">
+                    <div>
+                        <div>
+                            <img src="../../assets/img/Whyme-img/Icon Remote.png" alt="">
+                            <img class="remote-hover-img" src="../../assets/img/Whyme-img/remoter_hover.png">
+                        </div>
+
+
+                        @if (this.portfolio.languageGerman) {
+                        <span>bin offen für Remote</span>
+                        }@else {
+                        <span>am open to remote</span>
+                        }
+
+                        <img class="arrow" src="../../assets/img/Whyme-img/Arrow 4.png" alt="">
+                    </div>
+                    <img src="../../assets/img/Whyme-img/Arrow 01.png" alt="">
+
+                </div>
+                <div class="arrow-Container-Responsive-bottom">
+                    <img src="../../assets/img/Whyme-img/Arrow 3.png" alt="">
+                </div>
+                <div class="button-Container">
+                    @if (this.portfolio.languageGerman) {
+                        <a href="#contact"><button class="button">lass uns sprechen </button></a>
+                    }@else {
+                        <a href="#contact"><button class="button">Let's talk </button></a>
+                    }
+                   
+
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
