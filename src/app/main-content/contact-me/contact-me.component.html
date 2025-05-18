@@ -3,7 +3,7 @@
     <div class="contact-me-Top">
       <div class="container-Title">
         @if (this.potfolio.languageGerman) {
-        <span>Kontaktiere mich</span>
+        <span>Kontaktieren sie mich</span>
         }@else {
         <span>Contact me</span>
         }
@@ -13,9 +13,8 @@
       <div class="container-Content">
         <div class="content">
           @if (this.potfolio.languageGerman) {
-          <span>Noch nicht sicher ob ich die richtige Person für Ihr Projekt bin? Kontaktieren sie mich
-            damit ich
-            Ihre meinung änderen kann. Lassen sie uns zusammenarbeiten.</span>
+          <span>Noch nicht sicher, ob ich die richtige Person für Ihr Projekt bin?. Kontaktieren Sie mich, damit ich
+            Ihre Meinung ändern kann. Lassen Sie uns zusammenarbeiten.</span>
           }@else {
           <span>Not sure if I'm the right person for your project? Contact me
             so that I
@@ -56,7 +55,7 @@
       <div class="contactme-Form_top">
         <div>
           @if (this.potfolio.languageGerman) {
-          <input
+          <input placeholder="Ihr Name"
             [ngClass]="{'empty-input-Name':!contactData.name && name.touched, 'invalid-placeholder':!contactData.name && name.touched}"
             #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name" required>
           <div class="validation-container">
@@ -64,7 +63,7 @@
           </div>
 
           }@else {
-          <input
+          <input placeholder="youre name"
             [ngClass]="{'empty-input-Name':!contactData.name && name.touched, 'invalid-placeholder':!contactData.name && name.touched}"
             #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name" required>
           <div class="validation-container">
@@ -74,7 +73,7 @@
           }
 
           @if (this.potfolio.languageGerman) {
-          <input
+          <input placeholder="Ihre E-Mail-Adresse"
             [ngClass]="{'empty-input-Name': !contactData.email && email.touched, 'invalid-placeholder': !contactData.email && email.touched}"
             #email="ngModel" [(ngModel)]="contactData.email" type="text" id="email" name="email" required
             pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
@@ -88,7 +87,7 @@
           </div>
 
           }@else {
-          <input
+          <input placeholder="Your email"
             [ngClass]="{'empty-input-Name': !contactData.email && email.touched, 'invalid-placeholder': !contactData.email && email.touched}"
             #email="ngModel" [(ngModel)]="contactData.email" type="text" id="email" name="email" required
             pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
@@ -107,7 +106,7 @@
         <div>
           @if (this.potfolio.languageGerman) {
 
-          <textarea
+          <textarea placeholder="Ihre Nachricht"
             [ngClass]="{'empty-input-Name':!contactData.message && message.touched, 'invalid-placeholder':!contactData.message && message.touched}"
             #message="ngModel" minlength="4" [(ngModel)]="contactData.message" name="message" id="message"
             required></textarea>
@@ -121,7 +120,7 @@
 
 
           }@else {
-          <textarea
+          <textarea placeholder="Your message"
             [ngClass]="{'empty-input-Name':!contactData.message && message.touched, 'invalid-placeholder':!contactData.message && message.touched}"
             #message="ngModel" minlength="4" [(ngModel)]="contactData.message" name="message" id="message"
             required></textarea>
@@ -143,7 +142,8 @@
           Verarbeitung meiner
           Daten einverstanden.</span>
         }@else {
-        <span>I have read the <a routerLink="privacypolicy">privacy policy</a> and agree to the agreed processing of my data.</span>
+        <span>I have read the <a routerLink="privacypolicy">privacy policy</a> and agree to the agreed processing of my
+          data.</span>
         }
       </div>
 
