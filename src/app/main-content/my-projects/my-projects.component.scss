@@ -196,6 +196,24 @@
     font-size: 18px;
 }
 
+.DaBubble-Container {
+    display: flex;
+    gap: 50px;
+    flex-direction: row-reverse;
+    >.img-Container{
+        >img{
+            width: 588px;
+            height: 372px;
+        }
+    }
+}
+
+.DaBubble-content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 
 @media(max-width:1490px) {
     .my-Projects-Contents {
