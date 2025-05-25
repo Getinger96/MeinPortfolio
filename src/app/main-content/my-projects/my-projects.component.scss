@@ -243,6 +243,16 @@
 
     }
 
+    .DaBubble-Container {
+   
+    >.img-Container{
+        >img{
+            width: 500px;
+            height: 388px;
+        }
+    }
+}
+
     .img-Container {
         >img {
             width: 500px;
@@ -257,6 +267,16 @@
 
 
     }
+
+    .DaBubble-Container {
+   
+    >.img-Container{
+        >img{
+            width: 367px;
+            height: 300px;
+        }
+    }
+}
 
     .img-Container {
         >img {
@@ -316,6 +336,16 @@
     }
 
     .sharkie-Content {
+        align-items: center;
+    }
+
+    .DaBubble-Container {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding-left: 16px;
+    }
+
+    .DaBubble-content {
         align-items: center;
     }
 
@@ -418,6 +448,16 @@
     .colleagues {
         width: 280px;
     }
+
+    .DaBubble-Container {
+   
+    >.img-Container{
+        >img{
+            width: 280px;
+            height: 260px;
+        }
+    }
+}
 
     .img-Container {
         >img {
