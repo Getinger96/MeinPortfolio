@@ -1,27 +1,63 @@
-# Portfolio
+# Portfolio – Erich Getinger
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.6.
+Persönliches Portfolio als Frontend Entwickler, gebaut mit Angular. Zeigt Projekte, Skills und Kontaktmöglichkeiten.
 
-## Development server
+**Live:** [erich-getinger.com](https://erich-getinger.com)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Screenshot
 
-## Code scaffolding
+<!-- Screenshot der Startseite hier einfügen, z.B. den Above-the-fold-Bereich -->
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Features
+
+- Zweisprachig (Deutsch/Englisch), Umschaltung per Klick, Speicherung in `localStorage`
+- Projektübersicht mit Live-Demo- und GitHub-Links
+- Kontaktformular mit PHP-Mail-Backend
+- Scroll-Animationen via [AOS](https://michalsnik.github.io/aos/)
+
+## Tech-Stack
+
+- Angular 17 (Standalone Components)
+- TypeScript
+- SCSS
+- AOS (Animate On Scroll)
+
+## Projektstruktur
+
+```
+src/app/
+├── nav-bar/          # Navigation mit Sprachumschaltung
+├── main-content/
+│   ├── above-the-fold/
+│   ├── why-me/
+│   ├── my-skills/
+│   ├── my-projects/
+│   └── contact-me/
+├── footer/
+├── porfolio.service.ts   # Zustand: Sprache, Menü-Overlay
+└── sendMail.php          # Server-seitiges Mail-Skript für das Kontaktformular
+```
+
+## Lokal starten
+
+Voraussetzung: Node.js und Angular CLI installiert.
+
+```bash
+npm install
+ng serve
+```
+
+Aufrufbar unter `http://localhost:4200`.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```bash
+ng build
+```
 
-## Running unit tests
+Ergebnis liegt im `dist/`-Ordner.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Kontakt
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- E-Mail: erich.getinger@outlook.de
+- LinkedIn: [Profil-Link einfügen]
