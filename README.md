@@ -60,4 +60,4 @@ Ergebnis liegt im `dist/`-Ordner.
 ## Kontakt
 
 - E-Mail: erich.getinger@outlook.de
-- LinkedIn: [Profil-Link einfügen]
+- LinkedIn: https://www.linkedin.com/in/erich-getinger-45536a255/
