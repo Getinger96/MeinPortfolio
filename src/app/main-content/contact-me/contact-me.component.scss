@@ -11,21 +11,25 @@
 }
 
 .validation-container {
-    min-height: 20px;  /* Stelle sicher, dass immer ein wenig Platz reserviert wird, auch wenn keine Nachricht da ist */
-    visibility: hidden; /* Nachricht bleibt unsichtbar, aber der Raum wird weiterhin reserviert */
-  }
-  
-  .validation-text {
-    visibility: visible;  /* Wenn die Nachricht angezeigt wird, bleibt sie sichtbar */
+    min-height: 20px;
+    /* Stelle sicher, dass immer ein wenig Platz reserviert wird, auch wenn keine Nachricht da ist */
+    visibility: hidden;
+    /* Nachricht bleibt unsichtbar, aber der Raum wird weiterhin reserviert */
+}
+
+.validation-text {
+    visibility: visible;
+    /* Wenn die Nachricht angezeigt wird, bleibt sie sichtbar */
     color: red;
     font-size: 16px;
-  }
-  
-  input:invalid {
-    border-color: red; /* Optional: rote Umrandung, wenn die Eingabe ungültig ist */
-  }
-  
- 
+}
+
+input:invalid {
+    border-color: red;
+    /* Optional: rote Umrandung, wenn die Eingabe ungültig ist */
+}
+
+
 .contact-Me-Content {
     width: 1440px;
 }
@@ -50,12 +54,25 @@
         align-items: center;
         width: 70px;
         height: 100px;
+        animation: bounceDown 1.8s ease-in-out infinite;
 
         >img {
 
             cursor: pointer;
         }
 
+    }
+
+    @keyframes bounceDown {
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(12px);
+        }
     }
 
 
@@ -119,7 +136,7 @@ form {
             width: 650px;
             display: flex;
             flex-direction: column;
-            
+
 
 
             >input {
@@ -131,7 +148,7 @@ form {
                 border: 1px solid rgba(2, 244, 191, 1);
                 padding: 8px;
 
-                
+
 
 
 
@@ -177,8 +194,9 @@ form {
     justify-content: end;
     cursor: pointer;
 
-    &:hover{
-        background-color:  rgba(2, 244, 191, 1);;
+    &:hover {
+        background-color: rgba(2, 244, 191, 1);
+        ;
     }
 }
 
@@ -376,12 +394,12 @@ form {
     }
 
     .container-Content {
-        >.img_div{
+        >.img_div {
             display: none;
         }
 
-       
-       
+
+
     }
 
     form {
@@ -435,19 +453,21 @@ form {
             font-family: 'Roboto Mono';
             font-weight: 700;
             font-size: 18px;
+
             >img {
                 width: 50px;
                 height: 50px;
             }
         }
 
-       
+
     }
 
     .contact-me-arrow-responsive {
         display: flex;
         justify-content: flex-end;
-        >div{
+
+        >div {
             width: 50px;
             height: 50px;
             display: flex;

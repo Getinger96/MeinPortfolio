@@ -12,13 +12,14 @@ import Aos from 'aos';
 import { MainContentComponent } from "./main-content/main-content.component";
 import { DatenschutzComponent } from './datenschutz/datenschutz.component';
 import { ImpressumComponent } from './impressum/impressum.component';
+import {StarfieldComponent} from "./starfield/starfield.component";
 
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, ContactMeComponent, WhyMeComponent, MySkillsComponent, MyProjectsComponent, FooterComponent, NavBarComponent, RouterLink, MainContentComponent, DatenschutzComponent, ImpressumComponent, RouterModule],
+  imports: [CommonModule, RouterOutlet, ContactMeComponent, WhyMeComponent, MySkillsComponent, MyProjectsComponent, FooterComponent, NavBarComponent, RouterLink, MainContentComponent, DatenschutzComponent, ImpressumComponent, RouterModule, StarfieldComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

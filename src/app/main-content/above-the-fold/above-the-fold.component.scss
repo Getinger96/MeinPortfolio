@@ -1,5 +1,5 @@
 .menu {
-    height:100%;
+    height: 100%;
     background: linear-gradient(rgba(19, 7, 78, 1), rgba(29, 10, 121, 0.95));
     z-index: 1;
     display: flex;
@@ -24,29 +24,30 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    >div{
+
+    >div {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 100px;
-        
-    
-    
+
+
+
         >a {
             text-decoration: none;
             color: rgba(225, 85, 68, 1);
             font-family: 'Roboto Mono';
             font-size: 18px;
-    
+
             &:hover {
                 color: rgba(2, 244, 191, 1);
             }
         }
     }
-    
+
 }
 
-   
+
 
 
 
@@ -57,10 +58,21 @@
 
 
 .vector {
-    transition: transform 0.3s ease-out;
     cursor: pointer;
+    animation: bounceDown 1.8s ease-in-out infinite;
+    filter: drop-shadow(0 0 4px rgba(53, 224, 196, 0.6));
+}
 
+@keyframes bounceDown {
 
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(12px);
+    }
 }
 
 .aboveTheFold_Container {
@@ -92,10 +104,12 @@
             border: 1px solid rgba(2, 244, 191, 1);
             padding: 8px;
             cursor: pointer;
+            filter: drop-shadow(0 0 4px rgba(53, 224, 196, 0.6));
 
             &:hover {
                 background-color: rgba(225, 85, 68, 1);
                 color: rgba(2, 244, 191, 1);
+
             }
 
 
@@ -125,7 +139,7 @@
     margin-top: 94px;
     gap: 175px;
 
-   
+
 
     >div {
         >.vector-container {
@@ -148,12 +162,14 @@
             animation: slideIn 2s forwards;
             font-weight: 500;
             font-size: 54px;
+            filter: drop-shadow(0 0 4px rgba(53, 224, 196, 0.6));
         }
 
         .bigName {
             animation: slideIn 2s forwards;
             font-size: 80px;
-            
+            filter: drop-shadow(0 0 4px rgba(53, 224, 196, 0.6));
+
         }
 
     }
@@ -165,7 +181,7 @@
 
         height: 750px;
         width: 539px;
-        
+
 
     }
 
@@ -196,28 +212,32 @@
 
 @keyframes slideIn {
     0% {
-       
+
         opacity: 0;
     }
+
     100% {
-        
+
         opacity: 1;
-      
+
     }
 }
 
 .typing {
-    animation-delay: 0s; /* Der Text "FRONTEND DEVELOPER" kommt sofort */
+    animation-delay: 0s;
+    /* Der Text "FRONTEND DEVELOPER" kommt sofort */
 }
 
 .bigName {
-    animation-delay: 2s; /* Der Text "Erich Getinger" kommt nach einer Verzögerung */
+    animation-delay: 2s;
+    /* Der Text "Erich Getinger" kommt nach einer Verzögerung */
 }
+
 .no-scroll {
     overflow: hidden;
     height: 100%;
-  }
-  
+}
+
 
 
 
@@ -259,7 +279,7 @@
 }
 
 @media(max-width:1270px) {
-    
+
 
 
 
@@ -301,7 +321,7 @@
     .me-Container {
         width: 900px;
         gap: 105px;
-        
+
 
         >img {
 
@@ -328,12 +348,12 @@
 
 @media(max-width:950px) {
 
-    
+
 
     .me-Container {
-gap: 65px;
+        gap: 65px;
         width: 720px;
-       
+
 
         >div {
             >span {
@@ -385,12 +405,12 @@ gap: 65px;
         gap: 10px;
         height: auto;
         margin-top: 70px;
-        
+
 
         >div {
             align-items: center;
 
-            >.vector-container{
+            >.vector-container {
                 display: none;
             }
         }
@@ -448,7 +468,7 @@ gap: 65px;
 
 @media(max-width:340px) {
 
-   
+
 
     .me-Container {
         width: 300px;
@@ -460,5 +480,3 @@ gap: 65px;
 
 
 }
-
-
